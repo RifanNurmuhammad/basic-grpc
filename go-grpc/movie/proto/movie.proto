@@ -1,0 +1,21 @@
+syntax = "proto3";
+option go_package = "github.com/rifannurmuhammad/go-grpc/movie/proto";
+package movie;
+
+service MovieService {
+    rpc findAll(Empty) returns (MovieMessageList);
+    rpc addMovie(MovieMessage) returns (MovieMessage);
+}
+
+message MovieMessage {
+    string title = 1;
+    string author = 2;
+    string isbn = 3;
+    string category = 4;
+}
+
+message MovieMessageList {
+    repeated MovieMessage movie = 1;
+}
+
+message Empty {}
