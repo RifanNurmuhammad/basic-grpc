@@ -1,0 +1,18 @@
+syntax = "proto3";
+package actor;
+
+service ActorService {
+    rpc findAll(Empty) returns (ActorMessageList);
+    rpc addActor(ActorMessage) returns (ActorMessage);
+}
+
+message ActorMessage {
+    string name = 1;
+    string gender = 2;
+}
+
+message ActorMessageList {
+    repeated ActorMessage actor = 1;
+}
+
+message Empty {}

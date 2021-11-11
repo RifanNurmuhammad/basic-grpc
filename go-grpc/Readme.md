@@ -7,6 +7,7 @@ https://grpc.io/docs/languages/go/quickstart
 - Install golang
 - Instal protocol buffer (brew install protobuf)
 - export GO111MODULE=on
+- export PATH="$PATH:$(go env GOPATH)/bin"
 - go mod init example.com/go-grpc
 - go get google.golang.org/protobuf/cmd/protoc-gen-go
 - go get google.golang.org/grpc/cmd/protoc-gen-go-grpc
